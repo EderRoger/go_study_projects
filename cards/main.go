@@ -7,4 +7,5 @@ func main() {
 
 	hand.print()
 	remainingCards.print()
+	remainingCards.saveToFile("cards_game")
 }

@@ -5,18 +5,17 @@ import (
 )
 
 func main() {
-	// var colors map[string]string
+	colors := map[string]string{
+		"red":   "#ff0000",
+		"green": "#4b745",
+		"white": "#ffffff",
+	}
 
-	colors := make(map[string]string)
+	printMap(colors)
+}
 
-	// colors := map[string]string{
-	// 	"red":   "#ff0000",
-	// 	"green": "#4b745",
-	// }
-
-	colors["white"] = "#ffffff"
-
-	delete(colors, "white")
-
-	fmt.Println(colors)
+func printMap(c map[string]string) {
+	for key, value := range c {
+		fmt.Println("Hex code for", key, "is", value)
+	}
 }

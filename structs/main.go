@@ -25,9 +25,7 @@ func main() {
 		},
 	}
 
-	ederPointer := &eder
-
-	ederPointer.updateName("Bacano")
+	eder.updateName("Bacano")
 	eder.print()
 }
 

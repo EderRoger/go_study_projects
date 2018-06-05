@@ -12,19 +12,29 @@ type contactInfo struct {
 type person struct {
 	firstName string
 	lastName  string
-	contact   contactInfo
+	contactInfo
 }
 
 func main() {
 	eder := person{
 		firstName: "Eder",
 		lastName:  "Roger",
-		contact: contactInfo{
+		contactInfo: contactInfo{
 			email:   "e.r.s@gmail.com",
 			zipCode: 34324454,
 		},
 	}
 
-	fmt.Printf("%+v", eder)
+	ederPointer := &eder
 
+	ederPointer.updateName("Bacano")
+	eder.print()
+}
+
+func (pointerToPerson *person) updateName(newFirstName string) {
+	(*pointerToPerson).firstName = newFirstName
+}
+
+func (p person) print() {
+	fmt.Printf("%+v", p)
 }

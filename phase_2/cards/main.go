@@ -4,8 +4,8 @@ import "fmt"
 
 func main() {
 	// var card string = "Aces of Spades"
-	card := newCard()
-	fmt.Println(card)
+	cards := []string{newCard(), newCard()}
+	fmt.Println(cards)
 }
 
 func newCard() string {

@@ -1,6 +1,6 @@
 FROM golang:1.7.3 as build
 WORKDIR /src/
-COPY main.go go.* /src/
+COPY *.go go.* /src/
 RUN CGO_ENABLED=0 go build -o /bin/demo
 
 FROM scratch

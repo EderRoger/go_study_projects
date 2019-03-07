@@ -4,6 +4,10 @@ import "fmt"
 
 func main() {
 	// var card string = "Aces of Spades"
-	card := "Aces of Spades" // the same effect
+	card := newCard()
 	fmt.Println(card)
+}
+
+func newCard() string {
+	return "Five of Spades"
 }

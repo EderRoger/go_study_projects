@@ -17,7 +17,6 @@ func newDeck() deck {
 	}
 
 	return cards
-
 }
 
 func (d deck) print() {

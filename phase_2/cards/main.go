@@ -1,12 +1,16 @@
 package main
 
 func main() {
-	fileName := "my_cards"
+	// fileName := "my_cards"
 
-	cards := newDeck()
-	cards.saveToFile(fileName)
+	// cards := newDeck()
+	// cards.saveToFile(fileName)
 
-	cardsFromFile := newDeckFromFile(fileName)
-	cardsFromFile.print()
+	// cardsFromFile := newDeckFromFile(fileName)
+	// cardsFromFile.print()
+
+	shufleCards := newDeck()
+	shufleCards.shufle()
+	shufleCards.print()
 
 }

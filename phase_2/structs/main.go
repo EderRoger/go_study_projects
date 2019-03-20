@@ -22,13 +22,15 @@ func main() {
 			zipCode: 909374937,
 		},
 	}
-	eder.updateName("Ed")
+
+	ederPointer := &eder
+	ederPointer.updateName("Ed")
 	eder.print()
 
 }
 
-func (p *person) updateName(newFirstName string) {
-	p.firstName = newFirstName
+func (pointerToPerson *person) updateName(newFirstName string) {
+	(*pointerToPerson).firstName = newFirstName
 }
 
 func (p person) print() {

@@ -11,10 +11,12 @@ func main() {
 	}
 
 	printMap(colors)
+	fmt.Println(colors)
 }
 
 func printMap(colors map[string]string) {
 	for color, value := range colors {
 		fmt.Printf("Hex code for %v is %v ", color, value)
 	}
+	colors["black"] = "#000000"
 }
